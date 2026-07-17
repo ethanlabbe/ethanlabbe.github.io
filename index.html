@@ -10,109 +10,124 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=Exo+2:wght@600&family=Oxygen:wght@700&family=Quicksand:wght@600&family=Righteous&family=Source+Code+Pro&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body id="top">
 
     <a class="skip-link" href="#about">Skip to content</a>
 
-    <a href="#top" class="header-logo-link" aria-label="Go to top">
-        <img class="header-logo" src="external/logo.png" alt="Ethan Labbe logo">
-    </a>
+    <header class="nouveau-header">
+        <a href="#top" class="header-logo-link" aria-label="Go to top">
+            <img class="header-logo" src="external/logo.png" alt="Ethan Labbe logo">
+        </a>
+        <nav class="jump-nav">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <nav class="jump-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="spacer layer2">
-    </div>
-
-    <div class="container">
-        <h1>Ethan Labbe</h1>
-        <h2>Project Portfolio</h2>
-    </div>
-
-    <div class="spacer3"></div>
-    <div class="spacer2 layer1"></div>
-
-    <section id="about" class="yellow">
-        <div class="about-grid">
-            <img class="profile-photo" src="external/profile_photo.JPG" alt="Profile photo of Ethan Labbe">
-            <div class="about-copy">
-                <div id="about-content" class="markdown-content leftxt"></div>
+    <main class="main-wrapper">
+        <div class="hero-container">
+            <div class="hero-frame">
+                <h1>Ethan Labbe</h1>
+                <h2>Project Portfolio</h2>
+                <div class="whiplash-divider"></div>
             </div>
         </div>
-    </section>
 
-    <div class="spacer2 layer4"></div>
+        <section id="about" class="nouveau-section">
+            <div class="about-grid">
+                <div class="photo-frame">
+                    <img class="profile-photo" src="external/profile_photo.JPG" alt="Profile photo of Ethan Labbe">
+                </div>
+                <div class="about-copy">
+                    <div id="about-content" class="markdown-content leftxt"></div>
+                </div>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="leftxt">
-
-            <h3>Stereo Vision System</h3>
-            <div class="project-text-block" id="project-stereo-vision-system"></div>
-            <div class="image-row">
-                <img class="project-image" src="external/stereo-cad.png" alt="CAD design of stereo vision system">
-                <img class="project-image" src="external/stereo-device.jpeg" alt="Stereo vision device">
-                <img class="project-image" src="external/head-depth-map.png" alt="head depth map">
-                <img class="large-project-image" src="external/calibration-depth-map.png" alt="calibration depth map">
+        <section id="projects" class="nouveau-section">
+            <div class="section-header-frame">
+                <h2>Projects</h2>
             </div>
 
-            <h3>Klon Centaur Guitar Pedal</h3>
-            <div class="project-text-block" id="project-guitar-pedal"></div>
+            <div class="leftxt project-list">
+                <div class="project-card">
+                    <h3>Stereo Vision System</h3>
+                    <div class="project-text-block" id="project-stereo-vision-system"></div>
+                    <div class="image-row">
+                        <img class="project-image" src="external/stereo-cad.png"
+                            alt="CAD design of stereo vision system">
+                        <img class="project-image" src="external/stereo-device.jpeg" alt="Stereo vision device">
+                        <img class="project-image" src="external/head-depth-map.png" alt="head depth map">
+                        <img class="large-project-image" src="external/calibration-depth-map.png"
+                            alt="calibration depth map">
+                    </div>
+                </div>
 
-            <h3><a target="_blank" href="external/DRAposter2.pdf">Fusion Energy Fuel Targets Research</a></h3>
-            <div class="project-text-block" id="project-fusion-energy-fuel-research"></div>
-            <div class="image-row">
-                <img class="project-image" src="external/Samplelightscattering.png" alt="Light Scattering">
-                <img class="project-image" src="external/Polystyrenespectra.png" alt="Polystyrene Spectra">
+                <div class="project-card">
+                    <h3>Klon Centaur Guitar Pedal</h3>
+                    <div class="project-text-block" id="project-guitar-pedal"></div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a target="_blank" href="external/DRAposter2.pdf" class="nouveau-link">Fusion Energy Fuel
+                            Targets Research</a></h3>
+                    <div class="project-text-block" id="project-fusion-energy-fuel-research"></div>
+                    <div class="image-row">
+                        <img class="project-image" src="external/Samplelightscattering.png" alt="Light Scattering">
+                        <img class="project-image" src="external/Polystyrenespectra.png" alt="Polystyrene Spectra">
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Solar PV Home Automation</h3>
+                    <div class="project-text-block" id="project-solar-pv-home-automation"></div>
+                    <div class="image-row">
+                        <img class="large-project-image" src="external/PanelWiring.jpg" alt="Panel Wiring">
+                        <img class="large-project-image" src="external/SolarPanel.jpg" alt="Solar Panel">
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a target="_blank" href="external/DRAposter.pdf" class="nouveau-link">Underwater Autonomous
+                            Vehicle Control Simulation (UAVCS)</a></h3>
+                    <div class="project-text-block" id="project-uavcm"></div>
+                    <div class="image-row">
+                        <img class="project-image" src="external/UAVCAD.jpg" alt="CAD Design of Vehicle">
+                        <img class="project-image" src="external/controlplot.jpg.png" alt="Control Plot">
+                        <img class="project-image" src="external/Divingplot.jpg.png" alt="Diving Plot">
+                    </div>
+                </div>
             </div>
+        </section>
 
-            
-            <h3>Solar PV Home Automation</h3>
-            <div class="project-text-block" id="project-solar-pv-home-automation"></div>
-            <div class="image-row">
-                <img class="large-project-image" src="external/PanelWiring.jpg" alt="Panel Wiring">
-                <img class="large-project-image" src="external/SolarPanel.jpg" alt="Solar Panel">
+        <section id="contact" class="nouveau-section contact-section">
+            <h2>Contact Me</h2>
+            <div class="contact-row">
+                <div id="contact-content" class="markdown-content contact-text"></div>
+                <div class="social-links">
+                    <a class="social-link" target="_blank" rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/ethan-labbe/">
+                        <img class="icon" src="external/linlogo.png" alt="LinkedIn Logo">
+                    </a>
+                    <a class="social-link" target="_blank" rel="noopener noreferrer"
+                        href="https://github.com/EthanLabb">
+                        <img class="icon" src="external/gitlogo.png" alt="GitHub Logo">
+                    </a>
+                </div>
             </div>
-
-            <h3><a target="_blank" href="external/DRAposter.pdf">Underwater Autonomous Vehicle Control Simulation (UAVCS)</a></h3>
-            <div class="project-text-block" id="project-uavcm"></div>
-            <div class="image-row">
-                <img class="project-image" src="external/UAVCAD.jpg" alt="CAD Design of Vehicle">
-                <img class="project-image" src="external/controlplot.jpg.png" alt="Control Plot">
-                <img class="project-image" src="external/Divingplot.jpg.png" alt="Diving Plot">
-            </div>
-        </div>
-    </section>
-
-
-    <div class="layer3 spacer2"></div>
-
-    <div id="contact" class="center red">
-        <h2>Contact Me</h2>
-    </div>
-
-    <div class="center red">
-        <div class="contact-row">
-            <div id="contact-content" class="markdown-content contact-text"></div>
-            <div class="social-links">
-                <a class="social-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ethan-labbe/">
-                    <img class="icon" src="external/linlogo.png" alt="LinkedIn Logo">
-                </a>
-
-                <a class="social-link" target="_blank" rel="noopener noreferrer" href="https://github.com/EthanLabb">
-                    <img class="icon" src="external/gitlogo.png" alt="GitHub Logo">
-                </a>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <script>
         async function loadMarkdownContent() {
@@ -173,7 +188,7 @@
 
             function formatInline(value) {
                 let formatted = escapeHtml(value);
-                formatted = formatted.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+                formatted = formatted.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a class="nouveau-link" href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
                 formatted = formatted.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
                 formatted = formatted.replace(/\*([^*]+)\*/g, '<em>$1</em>');
                 return formatted;
