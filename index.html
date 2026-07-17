@@ -54,6 +54,16 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="leftxt">
+
+            <h3>Stereo Vision System</h3>
+            <div class="project-text-block" id="project-stereo-vision-system"></div>
+            <div class="image-row">
+                <img class="project-image" src="external/stereo-cad.png" alt="CAD design of stereo vision system">
+                <img class="project-image" src="external/stereo-device.jpeg" alt="Stereo vision device">
+                <img class="project-image" src="external/head-depth-map.png" alt="head depth map">
+                <img class="large-project-image" src="external/calibration-depth-map.png" alt="calibration depth map">
+            </div>
+
             <h3>Klon Centaur Guitar Pedal</h3>
             <div class="project-text-block" id="project-guitar-pedal"></div>
 
@@ -108,6 +118,7 @@
         async function loadMarkdownContent() {
             const sections = [
                 { selector: '#about-content', file: 'content/about.md' },
+                { selector: '#project-stereo-vision-system', file: 'content/projects/stereo-vision.md' },
                 { selector: '#project-guitar-pedal', file: 'content/projects/guitar-pedal.md' },
                 { selector: '#project-fusion-energy-fuel-research', file: 'content/projects/fusion-energy-fuel-research.md' },
                 { selector: '#project-solar-pv-home-automation', file: 'content/projects/solar-pv-home-automation.md' },
