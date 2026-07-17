@@ -53,14 +53,35 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <div id="projects-content" class="markdown-content leftxt"></div>
+        <div class="leftxt">
+            <h3>Klon Centaur Guitar Pedal</h3>
+            <div class="project-text-block" id="project-guitar-pedal"></div>
+
+            <h3><a target="_blank" href="external/DRAposter2.pdf">Fusion Energy Fuel Targets Research</a></h3>
+            <div class="project-text-block" id="project-fusion-energy-fuel-research"></div>
+            <div class="image-row">
+                <img class="project-image" src="external/Samplelightscattering.png" alt="Light Scattering">
+                <img class="project-image" src="external/Polystyrenespectra.png" alt="Polystyrene Spectra">
+            </div>
+
+            
+            <h3>Solar PV Home Automation</h3>
+            <div class="project-text-block" id="project-solar-pv-home-automation"></div>
+            <div class="image-row">
+                <img class="large-project-image" src="external/PanelWiring.jpg" alt="Panel Wiring">
+                <img class="large-project-image" src="external/SolarPanel.jpg" alt="Solar Panel">
+            </div>
+
+            <h3><a target="_blank" href="external/DRAposter.pdf">Underwater Autonomous Vehicle Control Simulation (UAVCS)</a></h3>
+            <div class="project-text-block" id="project-uavcm"></div>
+            <div class="image-row">
+                <img class="project-image" src="external/UAVCAD.jpg" alt="CAD Design of Vehicle">
+                <img class="project-image" src="external/controlplot.jpg.png" alt="Control Plot">
+                <img class="project-image" src="external/Divingplot.jpg.png" alt="Diving Plot">
+            </div>
+        </div>
     </section>
 
-    <div class="center">
-        <img class="medpic" src="external/UAVCAD.jpg" alt="CAD Design of Vehicle">
-        <img class="medpic" src="external/controlplot.jpg.png" alt="Control Plot">
-        <img class="medpic" src="external/Divingplot.jpg.png" alt="Diving Plot">
-    </div>
 
     <div class="layer3 spacer2"></div>
 
@@ -87,7 +108,10 @@
         async function loadMarkdownContent() {
             const sections = [
                 { selector: '#about-content', file: 'content/about.md' },
-                { selector: '#projects-content', file: 'content/projects.md' },
+                { selector: '#project-guitar-pedal', file: 'content/projects/guitar-pedal.md' },
+                { selector: '#project-fusion-energy-fuel-research', file: 'content/projects/fusion-energy-fuel-research.md' },
+                { selector: '#project-solar-pv-home-automation', file: 'content/projects/solar-pv-home-automation.md' },
+                { selector: '#project-uavcm', file: 'content/projects/uavcm.md' },
                 { selector: '#contact-content', file: 'content/contact.md' }
             ];
 
@@ -99,7 +123,7 @@
                     const response = await fetch(section.file);
                     if (!response.ok) throw new Error(`Unable to load ${section.file}`);
                     const markdown = await response.text();
-                    element.innerHTML = renderMarkdown(markdown);
+                    element.innerHTML = renderMarkdown(markdown, section.file);
                 } catch (error) {
                     console.error(error);
                     element.innerHTML = '<p>Content could not be loaded.</p>';
@@ -107,7 +131,15 @@
             }
         }
 
-        function renderMarkdown(markdown) {
+        function resolveMarkdownAsset(assetPath, baseFile) {
+            if (!assetPath) return '';
+            if (/^(https?:)?\/\//i.test(assetPath) || assetPath.startsWith('data:')) {
+                return assetPath;
+            }
+            return new URL(assetPath, new URL(baseFile, window.location.href)).href;
+        }
+
+        function renderMarkdown(markdown, baseFile = '') {
             const lines = markdown.trim().split(/\r?\n/);
             let html = '';
             let paragraph = [];
@@ -148,6 +180,14 @@
                     flushParagraph();
                     const level = headingMatch[1].length;
                     html += `<h${level}>${formatInline(headingMatch[2])}</h${level}>`;
+                    return;
+                }
+
+                const imageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+                if (imageMatch) {
+                    flushParagraph();
+                    const imageSrc = resolveMarkdownAsset(imageMatch[2], baseFile);
+                    html += `<img src="${imageSrc}" alt="${imageMatch[1] || ''}" class="project-image">`;
                     return;
                 }
 

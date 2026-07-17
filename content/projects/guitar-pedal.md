@@ -1,0 +1,1 @@
+Replicated the famous Klon Centaur overdrive pedal circuit, designing and soldering the PCB with the standard guitar pedal I/O audio jacks and a 5V power supply. The pedal design also includes the classic gain, treble, and output volume potentiometer inputs. Pictures and audio files to be uploaded soon!
