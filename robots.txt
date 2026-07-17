@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /content/
+Allow: /external/
+
+Sitemap: https://ethanlabbe.github.io/sitemap.xml
