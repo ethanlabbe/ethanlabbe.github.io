@@ -70,6 +70,9 @@
         <h2>Projects</h2>
         <div class="leftxt">
 
+            <h3>Edge-Computing Architecture for Robotic Inspection</h3>
+            <div class="project-text-block" id="project-robotic-inspection"></div>
+
             <h3>Stereo Vision System</h3>
             <div class="project-text-block" id="project-stereo-vision-system"></div>
             <div class="image-row">
@@ -119,9 +122,13 @@
     </div>
 
     <div class="center red">
-        <div class="contact-row">
+        <div class="contact-stack">
             <div id="contact-content" class="markdown-content contact-text"></div>
-            <div class="social-links">
+            <div class="contact-row">
+                <button class="copy-email email-link" type="button" data-email="ethanlabbe1@gmail.com" aria-label="Copy email address">
+                    ethanlabbe1@gmail.com
+                </button>
+
                 <a class="social-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ethan-labbe/">
                     <img class="icon" src="external/linlogo.bmp" alt="LinkedIn Logo">
                 </a>
@@ -137,6 +144,7 @@
         async function loadMarkdownContent() {
             const sections = [
                 { selector: '#about-content', file: 'content/about.md' },
+                { selector: '#project-robotic-inspection', file: 'content/projects/robot-inspection.md' },
                 { selector: '#project-stereo-vision-system', file: 'content/projects/stereo-vision.md' },
                 { selector: '#project-guitar-pedal', file: 'content/projects/guitar-pedal.md' },
                 { selector: '#project-fusion-energy-fuel-research', file: 'content/projects/fusion-energy-fuel-research.md' },
@@ -228,7 +236,57 @@
             return html;
         }
 
-        document.addEventListener('DOMContentLoaded', loadMarkdownContent);
+        async function copyEmailToClipboard(email) {
+            if (!email) return false;
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(email);
+                    return true;
+                }
+
+                const textArea = document.createElement('textarea');
+                textArea.value = email;
+                textArea.setAttribute('readonly', '');
+                textArea.style.position = 'fixed';
+                textArea.style.top = '-9999px';
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                return true;
+            } catch (error) {
+                console.error('Copy failed:', error);
+                return false;
+            }
+        }
+
+        function bindCopyEmail() {
+            const emailButtons = document.querySelectorAll('.copy-email');
+
+            emailButtons.forEach((button) => {
+                button.addEventListener('click', async (event) => {
+                    event.preventDefault();
+                    const email = button.dataset.email || button.textContent.trim();
+                    const copied = await copyEmailToClipboard(email);
+
+                    if (copied) {
+                        const originalText = button.textContent.trim();
+                        button.classList.add('copied');
+                        button.textContent = 'Email copied!';
+                        setTimeout(() => {
+                            button.textContent = originalText;
+                            button.classList.remove('copied');
+                        }, 1200);
+                    }
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMarkdownContent();
+            bindCopyEmail();
+        });
     </script>
 </body>
 
