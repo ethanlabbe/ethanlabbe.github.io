@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://ethanlabbe.github.io/</loc>
-        <lastmod>2026-07-17</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
+    <url><loc>https://ethanlabbe.github.io/</loc><lastmod>2026-10-30</lastmod></url>
+    <url><loc>https://ethanlabbe.github.io/projects.html</loc><lastmod>2026-10-30</lastmod></url>
+    <url><loc>https://ethanlabbe.github.io/contact.html</loc><lastmod>2026-10-30</lastmod></url>
+    <url><loc>https://ethanlabbe.github.io/robotic-inspection.html</loc><lastmod>2026-10-30</lastmod></url>
+    <url><loc>https://ethanlabbe.github.io/stereo-vision.html</loc><lastmod>2026-10-30</lastmod></url>
+    <url><loc>https://ethanlabbe.github.io/guitar-pedal.html</loc><lastmod>2026-10-30</lastmod></url>
+    <url><loc>https://ethanlabbe.github.io/fusion-energy.html</loc><lastmod>2026-10-30</lastmod></url>
+    <url><loc>https://ethanlabbe.github.io/solar-tracking.html</loc><lastmod>2026-10-30</lastmod></url>
+    <url><loc>https://ethanlabbe.github.io/underwater-vehicle.html</loc><lastmod>2026-10-30</lastmod></url>
 </urlset>
