@@ -1,3 +1,1 @@
-Robotics / Edge Computing
-ROS 2, Raspberry Pi, Gazebo Sim
-In progress
+Building a ROS 2 hardware-in-the-loop inspection system where a Raspberry Pi 4 and wide-angle camera perform real-time edge anomaly detection, then dynamically offload demanding vision tasks to an external processor running Gazebo Sim when anomalies or resource overload are detected. This project is stil in progress, more to be updated soon...
