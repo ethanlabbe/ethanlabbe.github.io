@@ -1,1 +1,1 @@
-Feel free to reach out about engineering projects, research opportunities, or collaborations.
+For engineering projects, research, and collaborations.

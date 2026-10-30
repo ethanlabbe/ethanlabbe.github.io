@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Optimization for your name -->
     <title>Ethan Labbe | Project Portfolio</title>
@@ -20,13 +20,7 @@
     <meta property="og:url" content="https://ethanlabbe.github.io/">
     <meta property="og:type" content="website">
 
-    <!-- Your Original Assets (Keep these completely intact!) -->
     <link rel="icon" type="image/x-icon" href="external/logo.bmp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=Exo+2:wght@600&family=Oxygen:wght@700&family=Quicksand:wght@600&family=Righteous&family=Source+Code+Pro&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -34,111 +28,90 @@
 
     <a class="skip-link" href="#about">Skip to content</a>
 
-    <a href="#top" class="header-logo-link" aria-label="Go to top">
-        <img class="header-logo" src="external/logo.bmp" alt="Ethan Labbe logo">
-    </a>
-
-    <nav class="jump-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="spacer layer2">
-    </div>
-
-    <div class="container">
-        <h1>Ethan Labbe</h1>
-        <h2>Project Portfolio</h2>
-    </div>
-
-    <div class="spacer3"></div>
-    <div class="spacer2 layer1"></div>
-
-    <section id="about" class="yellow">
-        <div class="about-grid">
-            <img class="profile-photo" src="external/profile_photo.bmp" alt="Profile photo of Ethan Labbe">
-            <div class="about-copy">
-                <div id="about-content" class="markdown-content leftxt"></div>
-            </div>
-        </div>
+    <header class="site-header">
+        <div class="identity"><h1><a href="#projects">Ethan Labbe</a></h1>
+        <button class="copy-email" type="button" data-email="ethanlabbe1@gmail.com" aria-label="Copy email address" aria-live="polite">ethanlabbe1@gmail.com</button></div>
+        <a class="view-link" href="#about">about</a>
+        <a class="view-link" href="#projects">build</a>
+    </header>
+    <main>
+    <section id="about" hidden>
+        <div class="about-column"><h2>biography</h2><div class="column-content" id="about-content"></div></div>
+        <div class="about-column"><h2>links</h2><div class="column-content link-list">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/EthanLabbe">github</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ethan-labbe/">linkedin</a>
+            <a target="_blank" rel="noopener noreferrer" href="external/Ethan_Labbe_Resume.pdf">resume</a>
+        </div></div>
+        <div class="about-column" id="contact"><h2>contact</h2><div class="column-content">
+            <div id="contact-content"></div>
+            <a href="mailto:ethanlabbe1@gmail.com">ethanlabbe1@gmail.com</a>
+        </div></div>
     </section>
 
-    <div class="spacer2 layer4"></div>
-
     <section id="projects">
-        <h2>Projects</h2>
+        <h2 class="visually-hidden">Build projects</h2>
         <div class="leftxt">
 
-            <h3>Edge-Computing Architecture for Robotic Inspection</h3>
-            <div class="project-text-block" id="project-robotic-inspection"></div>
 
-            <h3>Stereo Vision System</h3>
-            <div class="project-text-block" id="project-stereo-vision-system"></div>
-            <div class="image-row">
-                <img class="project-image" src="external/stereo-cad.bmp" alt="CAD design of stereo vision system">
+            <article class="project">
+            <div class="project-info"><h3>Stereo Vision System</h3>
+            <div class="project-text-block" id="project-stereo-vision-system"></div></div>
+            <div class="image-row" tabindex="0" role="region" aria-label="Project images, scroll horizontally for more">
                 <img class="project-image" src="external/stereo-device.bmp" alt="Stereo vision device">
+                <img class="project-image" src="external/stereo-cad.bmp" alt="CAD design of stereo vision system">
                 <img class="project-image" src="external/head-depth-map.bmp" alt="head depth map">
                 <img class="large-project-image" src="external/calibration-depth-map.bmp" alt="calibration depth map">
             </div>
 
-            <h3>Klon Centaur Guitar Pedal</h3>
-            <div class="project-text-block" id="project-guitar-pedal"></div>
-            <div class="image-row">
+            </article>
+            <article class="project">
+            <div class="project-info"><h3>Klon Centaur Guitar Pedal</h3>
+            <div class="project-text-block" id="project-guitar-pedal"></div></div>
+            <div class="image-row" tabindex="0" role="region" aria-label="Project images, scroll horizontally for more">
                 <img class="large-project-image" src="external/guitar-pedal-enclosure.bmp" alt="Guitar Pedal Enclosure">
                 <img class="large-project-image" src="external/guitar-pedal-open.bmp" alt="Guitar Pedal Open">
             </div>
 
-            <h3><a target="_blank" href="external/DRAposter2.pdf">Fusion Energy Fuel Targets Research</a></h3>
-            <div class="project-text-block" id="project-fusion-energy-fuel-research"></div>
-            <div class="image-row">
+            </article>
+            <article class="project">
+            <div class="project-info"><h3><a target="_blank" rel="noopener noreferrer" href="external/DRAposter2.pdf">Fusion Fuel Targets</a></h3>
+            <div class="project-text-block" id="project-fusion-energy-fuel-research"></div></div>
+            <div class="image-row" tabindex="0" role="region" aria-label="Project images, scroll horizontally for more">
                 <img class="project-image" src="external/Samplelightscattering.bmp" alt="Light Scattering">
                 <img class="project-image" src="external/Polystyrenespectra.bmp" alt="Polystyrene Spectra">
             </div>
 
             
-            <h3>Solar PV Home Automation</h3>
-            <div class="project-text-block" id="project-solar-pv-home-automation"></div>
-            <div class="image-row">
+            </article>
+            <article class="project">
+            <div class="project-info"><h3>Solar Tracking</h3>
+            <div class="project-text-block" id="project-solar-pv-home-automation"></div></div>
+            <div class="image-row" tabindex="0" role="region" aria-label="Project images, scroll horizontally for more">
                 <img class="large-project-image" src="external/PanelWiring.bmp" alt="Panel Wiring">
                 <img class="large-project-image" src="external/SolarPanel.bmp" alt="Solar Panel">
             </div>
 
-            <h3><a target="_blank" href="external/DRAposter.pdf">Underwater Autonomous Vehicle Control Simulation (UAVCS)</a></h3>
-            <div class="project-text-block" id="project-uavcm"></div>
-            <div class="image-row">
+            </article>
+            <article class="project">
+            <div class="project-info"><h3><a target="_blank" rel="noopener noreferrer" href="external/DRAposter.pdf">Underwater Vehicle Simulation</a></h3>
+            <div class="project-text-block" id="project-uavcm"></div></div>
+            <div class="image-row" tabindex="0" role="region" aria-label="Project images, scroll horizontally for more">
                 <img class="project-image" src="external/UAVCAD.bmp" alt="CAD Design of Vehicle">
                 <img class="project-image" src="external/controlplot.bmp" alt="Control Plot">
                 <img class="project-image" src="external/Divingplot.bmp" alt="Diving Plot">
             </div>
+            </article>
+            <article class="project">
+            <div class="project-info"><h3>Robotic Inspection</h3>
+            <div class="project-text-block" id="project-robotic-inspection"></div></div>
+
+            </article>
         </div>
     </section>
 
 
-    <div class="layer3 spacer2"></div>
+    </main>
 
-    <div id="contact" class="center red">
-        <h2>Contact Me</h2>
-    </div>
-
-    <div class="center red">
-        <div class="contact-stack">
-            <div id="contact-content" class="markdown-content contact-text"></div>
-            <div class="contact-row">
-                <button class="copy-email email-link" type="button" data-email="ethanlabbe1@gmail.com" aria-label="Copy email address">
-                    ethanlabbe1@gmail.com
-                </button>
-
-                <a class="social-link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ethan-labbe/">
-                    <img class="icon" src="external/linlogo.bmp" alt="LinkedIn Logo">
-                </a>
-
-                <a class="social-link" target="_blank" rel="noopener noreferrer" href="https://github.com/EthanLabbe">
-                    <img class="icon" src="external/gitlogo.bmp" alt="GitHub Logo">
-                </a>
-            </div>
-        </div>
-    </div>
 
     <script>
         async function loadMarkdownContent() {
@@ -184,7 +157,7 @@
 
             function flushParagraph() {
                 if (paragraph.length) {
-                    html += `<p>${paragraph.join(' ')}</p>`;
+                    html += `<p>${paragraph.join('<br>')}</p>`;
                     paragraph = [];
                 }
             }
@@ -284,6 +257,18 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            function showView() {
+                const about = ['#about', '#contact'].includes(window.location.hash);
+                document.querySelector('#about').hidden = !about;
+                document.querySelector('#projects').hidden = about;
+                document.querySelectorAll('.view-link').forEach((link) => {
+                    const active = link.hash === (about ? '#about' : '#projects');
+                    if (active) link.setAttribute('aria-current', 'page');
+                    else link.removeAttribute('aria-current');
+                });
+            }
+            window.addEventListener('hashchange', showView);
+            showView();
             loadMarkdownContent();
             bindCopyEmail();
         });
